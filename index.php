@@ -16,7 +16,7 @@
 
 <div class="container">
 <?php
-$channels = array('astromiko','syntheticeq','rewisiontv','suvwi_thal','cmdrraijiin','isokix');
+$channels = array('astromiko','syntheticeq','rewisiontv','suvwi_thal','cmdrraijiin','isokix','robbyxp1');
 $callAPI = implode(",",$channels);
 $dataArray = json_decode(@file_get_contents('https://api.twitch.tv/kraken/streams?channel=' . $callAPI), true);
 
