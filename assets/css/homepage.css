@@ -4,7 +4,40 @@
     position: relative;
     width: 1920px;
     height: 310px;
-    /*left: -40px;*/
+    left: -17px;
     /*top: -40px;*/
     z-index: -1;
+}
+
+img.resize {
+    max-width: 55%;
+    max-height: 55%;
+    padding: 10px;
+}
+
+.stats {
+    padding: 20px;
+}
+
+.buttons{
+    padding-top: 52px;
+    padding-bottom: 52px;
+}
+
+.btn-twitch {
+     background-color: #6441a5;
+    border: 2px solid #ffffff;
+     color: white;
+    border-radius: 5px;
+ }
+
+.btn-twitch:hover, .btn-twitch:active {
+    background-color: #ffffff;
+    border: 2px solid #6441a5;
+    color: #6441a5;
+    border-radius: 5px;
+}
+
+.multi {
+    padding-bottom: 10px;
 }
