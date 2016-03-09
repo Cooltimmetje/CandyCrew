@@ -15,9 +15,15 @@
 </div>
 
 <div class="container">
+    <div class="page-header">
+        <h1 style="text-align: center;">Currently live Candy Crew members</h1>
+    </div>
+    <br>
     <?php
     $multistream = 'http://multistre.am/';
-    $channels = array('astromiko','syntheticeq','rewisiontv','suvwi_thal','cmdrraijiin','isokix','robbyxp1','iamotaku','mogriax');
+    $live = 0;
+    $channels = array('astromiko','syntheticeq','rewisiontv','suvwi_thal',
+        'cmdrraijiin','isokix','robbyxp1','iamotaku','mogriax','goldenphallus');
     $callAPI = implode(",",$channels);
     $dataArray = json_decode(@file_get_contents('https://api.twitch.tv/kraken/streams?channel=' . $callAPI), true);
 
@@ -32,7 +38,8 @@
             $title = $mydata['channel']['status'];
             $logo = $mydata['channel']['logo'];
             $uptime = @file_get_contents('https://decapi.me/twitch/uptime?channel=' . $mydata['channel']['name']);
-            $multistream = $multistream . $name . "/"
+            $multistream = $multistream . $name . "/";
+            $live = $live + 1;
 
 
             ?>
@@ -73,12 +80,32 @@
             <?php
         }
     }
+
+    if($live > 1){
     ?>
     <div class="container">
         <div style="text-align: center;">
             <h3>Can't decide who to watch?</h3>
-            <a href="<?= $multistream ?>" class="btn btn-default btn-twitch multi"><i class="fa fa-twitch"></i> Watch everyone on multistre.am</a>
+            <a href="<?= $multistream ?>" class="btn btn-default btn-twitch multi"><i class="fa fa-twitch"></i> Watch all <b><?= $live ?></b> Candy Crew Members on multistre.am</a>
         </div>
+    </div>
+    <?php } else if ($live == 0) { ?>
+<!--        <div class="container">-->
+<!--            <div class="panel panel-danger">-->
+<!--                <div class="panel-heading"><i class="fa fa-times"></i> <b>Aww... There are no Candy Crew members streaming right now :(</b></div>-->
+<!--                <div class="panel-content" style="text-align: center;">Don't be sad...<br>Here is a picture of a potato to cheer you up!<br><img class="no-live" src="http://3.bp.blogspot.com/-k6mmw9BbX4E/VXtPzM22rgI/AAAAAAAAAp0/axlLjiF-QKI/s1600/potato.gif"></div>-->
+<!--            </div>-->
+<!--        </div>-->
+        <div class="container">
+            <div class="panel panel-danger">
+                <div class="panel-heading"><i class="fa fa-times"></i> <b>Hmm... this is odd...</b></div>
+                <div class="panel-content" style="text-align: center;">We did our best to source some free candy for you<br>But we couldn't find any. We'll keep on looking for you!<br><img class="no-live" src="http://gifsec.com/wp-content/uploads/GIF/2014/04/where-is-everyone-gif.gif"></div>
+            </div>
+        </div>
+    <?php } ?>
+
+    <div class="footer">
+        
     </div>
 
 </div>
