@@ -1,7 +1,9 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <link rel="stylesheet" href="assets/css/homepage.css">
     <title>The Candy Crew | candycrew.space</title>
 </head>
@@ -68,8 +70,8 @@
                         </div>
                         <div class="col-md-3">
                             <div class="btn-group buttons">
-                               <a href="<?= $url ?>" class="btn btn-default btn-twitch"><i class="fa fa-twitch"></i> Watch <?= $name ?></a>
-<!--                                <button type="button" class="btn btn-default disabled"><i class="fa fa-plus"></i></button>-->
+                                <a href="<?= $url ?>" class="btn btn-default btn-twitch"><i class="fa fa-twitch"></i> Watch <?= $name ?></a>
+                                <!--                                <button type="button" class="btn btn-default disabled"><i class="fa fa-plus"></i></button>-->
                             </div>
                         </div>
 
@@ -82,32 +84,39 @@
     }
 
     if($live > 1){
-    ?>
-    <div class="container">
-        <div style="text-align: center;">
-            <h3>Can't decide who to watch?</h3>
-            <a href="<?= $multistream ?>" class="btn btn-default btn-twitch multi"><i class="fa fa-twitch"></i> Watch all <b><?= $live ?></b> Candy Crew Members on multistre.am</a>
+        ?>
+        <div class="container">
+            <div style="text-align: center;">
+                <h3>Can't decide who to watch?</h3>
+                <a href="<?= $multistream ?>" class="btn btn-default btn-twitch multi"><i class="fa fa-twitch"></i> Watch all <b><?= $live ?></b> Candy Crew Members on multistre.am</a>
+            </div>
         </div>
-    </div>
     <?php } else if ($live == 0) { ?>
-<!--        <div class="container">-->
-<!--            <div class="panel panel-danger">-->
-<!--                <div class="panel-heading"><i class="fa fa-times"></i> <b>Aww... There are no Candy Crew members streaming right now :(</b></div>-->
-<!--                <div class="panel-content" style="text-align: center;">Don't be sad...<br>Here is a picture of a potato to cheer you up!<br><img class="no-live" src="http://3.bp.blogspot.com/-k6mmw9BbX4E/VXtPzM22rgI/AAAAAAAAAp0/axlLjiF-QKI/s1600/potato.gif"></div>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="container">-->
+        <!--            <div class="panel panel-danger">-->
+        <!--                <div class="panel-heading"><i class="fa fa-times"></i> <b>Aww... There are no Candy Crew members streaming right now :(</b></div>-->
+        <!--                <div class="panel-content" style="text-align: center;">Don't be sad...<br>Here is a picture of a potato to cheer you up!<br><img class="no-live" src="http://3.bp.blogspot.com/-k6mmw9BbX4E/VXtPzM22rgI/AAAAAAAAAp0/axlLjiF-QKI/s1600/potato.gif"></div>-->
+        <!--            </div>-->
+        <!--        </div>-->
         <div class="container">
             <div class="panel panel-danger">
-                <div class="panel-heading"><i class="fa fa-times"></i> <b>Hmm... this is odd...</b></div>
-                <div class="panel-content" style="text-align: center;">We did our best to source some free candy for you<br>But we couldn't find any. We'll keep on looking for you!<br><img class="no-live" src="http://gifsec.com/wp-content/uploads/GIF/2014/04/where-is-everyone-gif.gif"></div>
+                <div class="panel-heading">
+                    <i class="fa fa-times"></i>
+                    <b>Hmm... this is odd...</b>
+                </div>
+                <div class="panel-content" style="text-align: center;">
+                    We did our best to source some free candy for you, but we couldn't find any.<br>
+                    We'll keep on looking for you! Check back later.<br><img class="no-live" src="http://gifsec.com/wp-content/uploads/GIF/2014/04/where-is-everyone-gif.gif">
+                </div>
             </div>
         </div>
     <?php } ?>
+</div>
 
-    <div class="footer">
-        
+<div class="footer">
+    <div class="container">
+        <p class="footertext">All data on this page is obtained via the Twitch API.<br>All images belong to their respective owners.</p>
     </div>
-
 </div>
 </body>
 </html>
