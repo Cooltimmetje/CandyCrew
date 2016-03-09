@@ -113,10 +113,10 @@
     <?php } ?>
 </div>
 
-<div class="footer">
-    <div class="container">
-        <p class="footertext">All data on this page is obtained via the Twitch API.<br>All images belong to their respective owners.</p>
-    </div>
-</div>
+<!--<div class="footer">-->
+<!--    <div class="container">-->
+<!--        <p class="footertext">All data on this page is obtained via the Twitch API.<br>All images belong to their respective owners.</p>-->
+<!--    </div>-->
+<!--</div>-->
 </body>
 </html>
