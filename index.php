@@ -18,7 +18,7 @@
 
 <div class="container">
     <div class="page-header">
-        <h1 style="text-align: center;">Currently live Candy Crew members</h1>
+        <h1 style="text-align: center;">These Candy Crew Pilots are currently live:</h1>
     </div>
     <br>
     <?php
@@ -70,7 +70,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="btn-group buttons">
-                                <a href="<?= $url ?>" class="btn btn-default btn-twitch"><i class="fa fa-twitch"></i> Watch <?= $name ?></a>
+                                <a href="<?= $url ?>" class="btn btn-default btn-twitch"><i class="fa fa-twitch"></i> Watch <?= $name ?> <i class="fa fa-chevron-right"></i></a>
                                 <!--                                <button type="button" class="btn btn-default disabled"><i class="fa fa-plus"></i></button>-->
                             </div>
                         </div>
