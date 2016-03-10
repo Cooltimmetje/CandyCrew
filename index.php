@@ -99,14 +99,12 @@
         <div class="container">
             <div class="panel panel-danger">
                 <div class="panel-heading"><i class="fa fa-times"></i> <b>Hmm... this is odd...</b></div>
-                <div class="panel-content" style="text-align: center;">We did our best to source some free candy for you<br>But we couldn't find any. We'll keep on looking for you!<br><img class="no-live" src="http://gifsec.com/wp-content/uploads/GIF/2014/04/where-is-everyone-gif.gif"></div>
+                <div class="panel-content" style="text-align: center;"><br>We did our best to source some free candy for you<br>
+                    But we couldn't find any. We'll keep on looking for you!<br><br>
+                    <img class="no-live" src="assets/images/no-live.gif"></div>
             </div>
         </div>
     <?php } ?>
-
-    <div class="footer">
-        
-    </div>
 
 </div>
 </body>
