@@ -45,7 +45,14 @@
             ?>
 
             <div class="panel panel-success">
-                <div class="panel-heading" style="text-align: justify;"><p class="fa fa-twitch"></p> <?php echo $name ?> | <b><?= $title ?></b></div>
+                <div class="panel-heading" style="text-align: justify;"><p class="fa fa-twitch"></p>
+
+                    <?php if($name == 'SyntheticEQ' || $name == 'AstroMiko' || $name == 'isokix'){ ?>
+                        <span class="label label-success">Captain</span>
+
+                    <?php } echo $name ?> | <b><?= $title ?></b>
+
+                </div>
                 <div class="panel-content">
                     <div class="container">
 
@@ -68,8 +75,8 @@
                         </div>
                         <div class="col-md-3">
                             <div class="btn-group buttons">
-                               <a href="<?= $url ?>" class="btn btn-default btn-twitch"><i class="fa fa-twitch"></i> Watch <?= $name ?></a>
-<!--                                <button type="button" class="btn btn-default disabled"><i class="fa fa-plus"></i></button>-->
+                                <a href="<?= $url ?>" class="btn btn-default btn-twitch"><i class="fa fa-twitch"></i> Watch <?= $name ?></a>
+                                <!--                                <button type="button" class="btn btn-default disabled"><i class="fa fa-plus"></i></button>-->
                             </div>
                         </div>
 
@@ -82,20 +89,20 @@
     }
 
     if($live > 1){
-    ?>
-    <div class="container">
-        <div style="text-align: center;">
-            <h3>Can't decide who to watch?</h3>
-            <a href="<?= $multistream ?>" class="btn btn-default btn-twitch multi"><i class="fa fa-twitch"></i> Watch all <b><?= $live ?></b> Candy Crew Members on multistre.am</a>
+        ?>
+        <div class="container">
+            <div style="text-align: center;">
+                <h3>Can't decide who to watch?</h3>
+                <a href="<?= $multistream ?>" class="btn btn-default btn-twitch multi"><i class="fa fa-twitch"></i> Watch all <b><?= $live ?></b> Candy Crew Members on multistre.am</a>
+            </div>
         </div>
-    </div>
     <?php } else if ($live == 0) { ?>
-<!--        <div class="container">-->
-<!--            <div class="panel panel-danger">-->
-<!--                <div class="panel-heading"><i class="fa fa-times"></i> <b>Aww... There are no Candy Crew members streaming right now :(</b></div>-->
-<!--                <div class="panel-content" style="text-align: center;">Don't be sad...<br>Here is a picture of a potato to cheer you up!<br><img class="no-live" src="http://3.bp.blogspot.com/-k6mmw9BbX4E/VXtPzM22rgI/AAAAAAAAAp0/axlLjiF-QKI/s1600/potato.gif"></div>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="container">-->
+        <!--            <div class="panel panel-danger">-->
+        <!--                <div class="panel-heading"><i class="fa fa-times"></i> <b>Aww... There are no Candy Crew members streaming right now :(</b></div>-->
+        <!--                <div class="panel-content" style="text-align: center;">Don't be sad...<br>Here is a picture of a potato to cheer you up!<br><img class="no-live" src="http://3.bp.blogspot.com/-k6mmw9BbX4E/VXtPzM22rgI/AAAAAAAAAp0/axlLjiF-QKI/s1600/potato.gif"></div>-->
+        <!--            </div>-->
+        <!--        </div>-->
         <div class="container">
             <div class="panel panel-danger">
                 <div class="panel-heading"><i class="fa fa-times"></i> <b>Hmm... this is odd...</b></div>
